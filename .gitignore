@@ -1,0 +1,48 @@
+# Environment and local secrets
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+*.crt
+
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+.venv/
+venv/
+ENV/
+
+# Node / frontend artifacts
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+build/
+
+# Runtime state, local databases, and generated crawl output
+accounts.db
+*.db
+*.sqlite
+*.sqlite3
+data/*.db
+data/*.sqlite*
+data/seen_posts*.json
+data/*state*.json
+logs/
+outputs/
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

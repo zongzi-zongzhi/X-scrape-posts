@@ -1,0 +1,286 @@
+{
+  "run": {
+    "dry_run_default": true,
+    "max_new_leads_per_run": 50,
+    "timezone": "Asia/Shanghai",
+    "provider": "scweet",
+    "fixture_path": "fixtures/sample_posts.json",
+    "raw_fetch_limit": 240
+  },
+  "scweet": {
+    "daily_requests_limit": 80,
+    "daily_tweets_limit": 900,
+    "concurrency": 1,
+    "n_splits": 1,
+    "requests_per_min": 6,
+    "min_delay_s": 5,
+    "max_empty_pages": 1,
+    "api_page_size": 20
+  },
+  "x": {
+    "queries": [
+      "(助けて OR 教えて OR 詰まった OR エラー OR 失敗) (Supabase OR Vercel OR データベース OR DB OR バックエンド OR \"API Key\" OR RLS OR Auth) (アプリ OR Webサイト OR SaaS OR MVP OR プロジェクト OR 個人開発)",
+      "(\"AIで作った\" OR \"AIで作って\" OR \"Cursorで\" OR \"vibe coding\") (アプリ OR Webサイト OR SaaS OR MVP OR プロジェクト) (バックエンド OR データベース OR ログイン OR デプロイ OR Supabase OR Vercel)",
+      "(Cursor OR \"Claude Code\" OR Lovable OR Bolt OR Trae OR WorkBuddy OR \"vibe coding\") (バックエンド OR データベース OR Supabase OR Vercel OR デプロイ OR ログイン) (詰まった OR エラー OR 失敗 OR 助けて OR 面倒 OR 煩雑)",
+      "(\"データ保存\" OR \"保存できない\" OR \"データベースエラー\" OR \"RLS 権限\" OR \"環境変数\") (AI OR Cursor OR Lovable OR Vercel OR Supabase OR プロジェクト)",
+      "(\"Vercel デプロイ 失敗\" OR \"Vercel 環境変数\" OR \"Supabase auth\" OR \"Supabase RLS\" OR \"ログイン 実装\") (助けて OR 教えて OR 詰まった OR エラー OR わからない)",
+      "(\"個人開発\" OR MVP OR SaaS) (バックエンド OR データベース OR 認証 OR デプロイ OR Supabase OR Vercel) (わからない OR 詰まった OR 面倒 OR 助けて OR エラー)",
+      "Supabase データベース lang:ja",
+      "Supabase 認証 lang:ja"
+    ],
+    "lang": "ja",
+    "result_type": "Latest",
+    "lookback_hours": 720,
+    "read_only": true
+  },
+  "filters": {
+    "high_priority_keywords": [
+      "AI アプリ データ保存",
+      "AI Webサイト データ保存",
+      "AI プロジェクト バックエンド",
+      "AI プロジェクト データベース",
+      "Vercel デプロイ 失敗",
+      "Vercel Supabase",
+      "Vercel API Key",
+      "Supabase auth",
+      "Supabase RLS",
+      "Supabase データ保存",
+      "個人開発 バックエンド",
+      "個人開発 データベース",
+      "個人開発 ログイン",
+      "vibe coding バックエンド",
+      "vibe coding データベース",
+      "WorkBuddy バックエンド",
+      "WorkBuddy データベース"
+    ],
+    "include_keywords": [
+      "Cursor",
+      "Claude Code",
+      "Trae",
+      "Lovable",
+      "Bolt",
+      "WorkBuddy",
+      "vibe coding",
+      "Vibe Coding",
+      "AI アプリ",
+      "AI Webサイト",
+      "AI プロジェクト",
+      "個人開発",
+      "MVP",
+      "SaaS",
+      "アプリ",
+      "Webサイト",
+      "バックエンド",
+      "データベース",
+      "DB",
+      "ログイン",
+      "認証",
+      "権限",
+      "RLS",
+      "Auth",
+      "API Key",
+      "環境変数",
+      "デプロイ",
+      "Vercel",
+      "Supabase",
+      "データ保存",
+      "保存できない",
+      "エラー",
+      "詰まった",
+      "助けて",
+      "教えて",
+      "どうすれば",
+      "面倒",
+      "煩雑",
+      "手動設定"
+    ],
+    "exclude_keywords": [
+      "Cursor チュートリアル",
+      "Claude Code チュートリアル",
+      "Trae チュートリアル",
+      "AI コーディング ツール紹介",
+      "入門",
+      "初心者",
+      "初学者",
+      "チュートリアル",
+      "手順",
+      "解説",
+      "紹介",
+      "保存推奨",
+      "必見",
+      "チェックリスト",
+      "記事",
+      "デイリーブリーフ",
+      "ブリーフ",
+      "アンケート",
+      "インタビュー",
+      "翻訳",
+      "公式発表",
+      "リリース",
+      "公開しました",
+      "発表",
+      "まとめました",
+      "講座",
+      "スクール",
+      "コミュニティ",
+      "教材",
+      "Day ",
+      "日報",
+      "ニュース",
+      "まとめ",
+      "ツールまとめ",
+      "GitHub トレンド",
+      "求人",
+      "採用",
+      "インターン",
+      "面接",
+      "履歴書",
+      "LLMとは",
+      "Agentとは",
+      "Web3",
+      "Token",
+      "insforge",
+      "InsForge",
+      "INSFORGE"
+    ],
+    "required_groups": {
+      "first_person": [
+        "作った",
+        "作ってる",
+        "作っています",
+        "AIで作",
+        "Cursorで",
+        "自分のアプリ",
+        "自分のサイト",
+        "自分のプロジェクト",
+        "個人開発"
+      ],
+      "project_context": [
+        "アプリ",
+        "Webサイト",
+        "サイト",
+        "SaaS",
+        "MVP",
+        "個人開発",
+        "プロジェクト",
+        "Demo",
+        "デモ",
+        "フロントエンド"
+      ],
+      "backend_pain": [
+        "バックエンド",
+        "データベース",
+        "DB",
+        "ログイン",
+        "認証",
+        "権限",
+        "RLS",
+        "Auth",
+        "API Key",
+        "環境変数",
+        "デプロイ",
+        "Vercel",
+        "Supabase",
+        "データ保存",
+        "保存できない"
+      ],
+      "help_tone": [
+        "助けて",
+        "教えて",
+        "どうすれば",
+        "詰まった",
+        "詰んだ",
+        "エラー",
+        "失敗",
+        "わからない",
+        "できない"
+      ],
+      "complaint_tone": [
+        "面倒",
+        "めんどくさい",
+        "煩雑",
+        "手間",
+        "だるい",
+        "手動設定",
+        "設定が大変",
+        "やりたくない"
+      ]
+    },
+    "must_match_groups": [
+      "backend_pain"
+    ],
+    "must_match_any_group_sets": [
+      [
+        "project_context"
+      ],
+      [
+        "help_tone",
+        "complaint_tone"
+      ]
+    ],
+    "min_score": 6,
+    "language_filter": {
+      "script": "japanese",
+      "min_japanese_chars": 6
+    },
+    "relaxed_min_score": 4,
+    "relaxed_must_match_groups": [
+      "backend_pain"
+    ],
+    "relaxed_must_match_any_group_sets": [
+      [
+        "project_context"
+      ],
+      [
+        "help_tone",
+        "complaint_tone",
+        "first_person"
+      ]
+    ]
+  },
+  "dedupe": {
+    "state_path": "data/seen_posts_ja.json",
+    "keys": [
+      "post_url",
+      "post_id",
+      "author_handle_text_hash"
+    ]
+  },
+  "no_reply_profile": {
+    "path": "config/no_reply_profile.json",
+    "training_inputs": [
+      "data/no_reply_samples.jsonl"
+    ],
+    "min_phrase_count": 2
+  },
+  "outputs": {
+    "root": "outputs/ja",
+    "pointer_path": "outputs/x_leads_ja_pointer.json"
+  },
+  "lark": {
+    "base_token": "",
+    "table_id": "",
+    "table_name": "X-日语",
+    "required_fields": [
+      "发布时间",
+      "帖子名字",
+      "帖子链接",
+      "状态",
+      "评论",
+      "匹配关键词",
+      "后续帖主回复",
+      "回复情况",
+      "二次评论",
+      "其他"
+    ],
+    "human_only_fields": [
+      "状态",
+      "评论",
+      "后续帖主回复",
+      "回复情况",
+      "二次评论",
+      "其他"
+    ],
+    "default_status": ""
+  }
+}

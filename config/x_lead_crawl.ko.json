@@ -1,0 +1,294 @@
+{
+  "run": {
+    "dry_run_default": true,
+    "max_new_leads_per_run": 50,
+    "timezone": "Asia/Shanghai",
+    "provider": "scweet",
+    "fixture_path": "fixtures/sample_posts.json",
+    "raw_fetch_limit": 240
+  },
+  "scweet": {
+    "daily_requests_limit": 80,
+    "daily_tweets_limit": 900,
+    "concurrency": 1,
+    "n_splits": 1,
+    "requests_per_min": 6,
+    "min_delay_s": 5,
+    "max_empty_pages": 1,
+    "api_page_size": 20
+  },
+  "x": {
+    "queries": [
+      "(도와주세요 OR 알려주세요 OR 막혔어요 OR 오류 OR 실패) (Supabase OR Vercel OR 데이터베이스 OR DB OR 백엔드 OR \"API Key\" OR RLS OR Auth) (앱 OR 웹사이트 OR SaaS OR MVP OR 프로젝트 OR 개인개발)",
+      "(\"AI로 만들\" OR \"Cursor로\" OR \"vibe coding\" OR 바이브코딩) (앱 OR 웹사이트 OR SaaS OR MVP OR 프로젝트) (백엔드 OR 데이터베이스 OR 로그인 OR 배포 OR Supabase OR Vercel)",
+      "(Cursor OR \"Claude Code\" OR Lovable OR Bolt OR Trae OR WorkBuddy OR \"vibe coding\") (백엔드 OR 데이터베이스 OR Supabase OR Vercel OR 배포 OR 로그인) (막혔 OR 오류 OR 실패 OR 도움 OR 귀찮 OR 번거)",
+      "(\"데이터 저장\" OR \"저장이 안\" OR \"저장 안\" OR \"데이터베이스 오류\" OR \"RLS 권한\" OR \"환경변수\") (AI OR Cursor OR Lovable OR Vercel OR Supabase OR 프로젝트)",
+      "(\"Vercel 배포 실패\" OR \"Vercel 환경변수\" OR \"Supabase auth\" OR \"Supabase RLS\" OR \"로그인 구현\") (도와주세요 OR 알려주세요 OR 막혔 OR 오류 OR 모르겠)",
+      "(\"개인개발\" OR \"사이드 프로젝트\" OR MVP OR SaaS) (백엔드 OR 데이터베이스 OR 인증 OR 배포 OR Supabase OR Vercel) (모르겠 OR 막혔 OR 귀찮 OR 도움 OR 오류)",
+      "Supabase 데이터베이스 lang:ko",
+      "Supabase 인증 lang:ko"
+    ],
+    "lang": "ko",
+    "result_type": "Latest",
+    "lookback_hours": 2160,
+    "read_only": true
+  },
+  "filters": {
+    "high_priority_keywords": [
+      "AI 앱 데이터 저장",
+      "AI 웹사이트 데이터 저장",
+      "AI 프로젝트 백엔드",
+      "AI 프로젝트 데이터베이스",
+      "AI 프로젝트 배포 실패",
+      "Vercel 배포 실패",
+      "Vercel Supabase",
+      "Vercel API Key",
+      "Supabase auth",
+      "Supabase RLS",
+      "Supabase 데이터 저장",
+      "개인개발 백엔드",
+      "개인개발 데이터베이스",
+      "개인개발 로그인",
+      "vibe coding 백엔드",
+      "vibe coding 데이터베이스",
+      "WorkBuddy 백엔드",
+      "WorkBuddy 데이터베이스"
+    ],
+    "include_keywords": [
+      "Cursor",
+      "Claude Code",
+      "Trae",
+      "Lovable",
+      "Bolt",
+      "WorkBuddy",
+      "vibe coding",
+      "바이브코딩",
+      "AI 앱",
+      "AI 웹사이트",
+      "AI 프로젝트",
+      "개인개발",
+      "사이드 프로젝트",
+      "MVP",
+      "SaaS",
+      "앱",
+      "웹사이트",
+      "백엔드",
+      "데이터베이스",
+      "DB",
+      "로그인",
+      "회원가입",
+      "인증",
+      "권한",
+      "RLS",
+      "Auth",
+      "API Key",
+      "환경변수",
+      "배포",
+      "Vercel",
+      "Supabase",
+      "데이터 저장",
+      "저장이 안",
+      "저장 안",
+      "오류",
+      "막혔",
+      "도와주세요",
+      "알려주세요",
+      "해결",
+      "귀찮",
+      "번거"
+    ],
+    "exclude_keywords": [
+      "Cursor 튜토리얼",
+      "Claude Code 튜토리얼",
+      "Trae 튜토리얼",
+      "AI 코딩 입문",
+      "초보",
+      "입문",
+      "튜토리얼",
+      "강좌",
+      "가이드",
+      "방법",
+      "추천",
+      "모음",
+      "정리",
+      "뉴스",
+      "발표",
+      "릴리스",
+      "체크리스트",
+      "저장해두세요",
+      "번역",
+      "기사",
+      "커뮤니티",
+      "채용",
+      "구인",
+      "취업",
+      "이력서",
+      "면접",
+      "강의",
+      "부트캠프",
+      "코호트",
+      "세미나",
+      "GitHub",
+      "스타",
+      "Star",
+      "오픈소스",
+      "프로젝트 추천",
+      "레딧 글",
+      "원문 작성자",
+      "체크해보면",
+      "만보",
+      "사다리",
+      "대회",
+      "커피",
+      "걸음",
+      "페널티",
+      "생존",
+      "A팀",
+      "B팀",
+      "무조건 보세요",
+      "필수",
+      "Web3",
+      "Token",
+      "insforge",
+      "InsForge",
+      "INSFORGE"
+    ],
+    "required_groups": {
+      "first_person": [
+        "제가 만들",
+        "내가 만들",
+        "저는 만들",
+        "AI로 만들",
+        "Cursor로",
+        "제 앱",
+        "제 웹사이트",
+        "제 프로젝트",
+        "개인개발"
+      ],
+      "project_context": [
+        "앱",
+        "웹사이트",
+        "SaaS",
+        "MVP",
+        "사이드 프로젝트",
+        "개인개발",
+        "프로젝트",
+        "서비스",
+        "프로덕트"
+      ],
+      "backend_pain": [
+        "백엔드",
+        "데이터베이스",
+        "DB",
+        "로그인",
+        "회원가입",
+        "인증",
+        "권한",
+        "RLS",
+        "Auth",
+        "API Key",
+        "환경변수",
+        "배포",
+        "Vercel",
+        "Supabase",
+        "데이터 저장",
+        "저장이 안"
+      ],
+      "help_tone": [
+        "도와주세요",
+        "알려주세요",
+        "해결",
+        "막혔",
+        "오류",
+        "실패",
+        "모르겠",
+        "안 됩니다",
+        "안돼"
+      ],
+      "complaint_tone": [
+        "귀찮",
+        "번거",
+        "복잡",
+        "너무 힘들",
+        "수동으로",
+        "하기 싫"
+      ]
+    },
+    "must_match_groups": [
+      "backend_pain"
+    ],
+    "must_match_any_group_sets": [
+      [
+        "project_context"
+      ],
+      [
+        "help_tone",
+        "complaint_tone"
+      ]
+    ],
+    "min_score": 6,
+    "language_filter": {
+      "script": "korean",
+      "min_hangul_chars": 8
+    },
+    "relaxed_min_score": 4,
+    "relaxed_must_match_groups": [
+      "backend_pain"
+    ],
+    "relaxed_must_match_any_group_sets": [
+      [
+        "project_context"
+      ],
+      [
+        "help_tone",
+        "complaint_tone",
+        "first_person"
+      ]
+    ]
+  },
+  "dedupe": {
+    "state_path": "data/seen_posts_ko.json",
+    "keys": [
+      "post_url",
+      "post_id",
+      "author_handle_text_hash"
+    ]
+  },
+  "no_reply_profile": {
+    "path": "config/no_reply_profile.json",
+    "training_inputs": [
+      "data/no_reply_samples.jsonl"
+    ],
+    "min_phrase_count": 2
+  },
+  "outputs": {
+    "root": "outputs/ko",
+    "pointer_path": "outputs/x_leads_ko_pointer.json"
+  },
+  "lark": {
+    "base_token": "",
+    "table_id": "",
+    "table_name": "X-韩语",
+    "required_fields": [
+      "发布时间",
+      "帖子名字",
+      "帖子链接",
+      "状态",
+      "评论",
+      "匹配关键词",
+      "后续帖主回复",
+      "回复情况",
+      "二次评论",
+      "其他"
+    ],
+    "human_only_fields": [
+      "状态",
+      "评论",
+      "后续帖主回复",
+      "回复情况",
+      "二次评论",
+      "其他"
+    ],
+    "default_status": ""
+  }
+}

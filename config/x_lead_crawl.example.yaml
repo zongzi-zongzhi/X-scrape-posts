@@ -1,0 +1,39 @@
+{
+  "run": {
+    "dry_run_default": true,
+    "max_new_leads_per_run": 50,
+    "timezone": "Asia/Shanghai",
+    "provider": "fixture",
+    "fixture_path": "fixtures/sample_posts.json"
+  },
+  "x": {
+    "queries": ["\"AI project\" backend", "\"backend as a service\" \"open source\""],
+    "lang": "en",
+    "result_type": "Latest",
+    "lookback_hours": 24,
+    "read_only": true
+  },
+  "filters": {
+    "include_keywords": ["supabase", "firebase", "backend as a service"],
+    "exclude_keywords": ["giveaway", "retweet to win"],
+    "min_score": 3
+  },
+  "dedupe": {
+    "state_path": "data/seen_posts.json",
+    "keys": ["post_url", "post_id", "author_handle_text_hash"]
+  },
+  "no_reply_profile": {
+    "path": "config/no_reply_profile.json",
+    "training_inputs": ["data/no_reply_samples.jsonl"],
+    "min_phrase_count": 2
+  },
+  "outputs": {
+    "root": "outputs",
+    "pointer_path": "outputs/x_insforge_master_pointer.json"
+  },
+  "lark": {
+    "required_fields": ["source", "post_url", "post_id", "author_handle", "author_name", "post_text", "created_at", "matched_keywords", "score", "reason", "status", "owner", "human_notes"],
+    "human_only_fields": ["status", "owner", "human_notes"],
+    "default_status": ""
+  }
+}

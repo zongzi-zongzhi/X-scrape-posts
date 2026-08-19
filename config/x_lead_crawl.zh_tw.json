@@ -1,0 +1,322 @@
+{
+  "run": {
+    "dry_run_default": true,
+    "max_new_leads_per_run": 50,
+    "timezone": "Asia/Shanghai",
+    "provider": "scweet",
+    "fixture_path": "fixtures/sample_posts.json",
+    "raw_fetch_limit": 240
+  },
+  "scweet": {
+    "daily_requests_limit": 50,
+    "daily_tweets_limit": 600,
+    "concurrency": 1,
+    "n_splits": 1,
+    "requests_per_min": 6,
+    "min_delay_s": 5,
+    "max_empty_pages": 1,
+    "api_page_size": 20
+  },
+  "x": {
+    "queries": [
+      "(我 OR 求助 OR 請教 OR 卡住 OR 報錯) (Supabase OR Vercel OR 資料庫 OR 後端 OR \"API Key\" OR RLS OR Auth) (App OR 網站 OR SaaS OR MVP OR 專案 OR 獨立開發)",
+      "(\"我做了\" OR \"我搭了\" OR \"我用 AI\" OR \"做了個\" OR \"搭了個\") (App OR 網站 OR SaaS OR MVP OR 專案) (後端 OR 資料庫 OR 登入 OR 部署 OR Supabase OR Vercel)",
+      "(Cursor OR \"Claude Code\" OR Lovable OR Bolt OR Trae OR WorkBuddy OR \"vibe coding\") (後端 OR 資料庫 OR Supabase OR Vercel OR 部署 OR 登入) (卡住 OR 報錯 OR 失敗 OR 求助 OR 麻煩 OR 繁瑣)",
+      "(\"資料存不進去\" OR \"資料保存失敗\" OR \"保存不了\" OR \"資料庫報錯\" OR \"RLS 權限\" OR \"環境變數\") (AI OR Cursor OR Lovable OR Vercel OR Supabase OR 專案)",
+      "(\"Vercel 部署失敗\" OR \"Vercel 環境變數\" OR \"Supabase auth\" OR \"Supabase RLS\" OR \"登入註冊\") (求助 OR 請教 OR 卡住 OR 報錯 OR 搞不定)",
+      "(\"獨立開發\" OR MVP OR SaaS) (後端 OR 資料庫 OR 登入註冊 OR 部署 OR Supabase OR Vercel) (不會 OR 卡住 OR 麻煩 OR 求助 OR 報錯)",
+      "Supabase 資料庫 lang:zh",
+      "Supabase 權限 lang:zh"
+    ],
+    "lang": "zh",
+    "result_type": "Latest",
+    "lookback_hours": 36,
+    "read_only": true
+  },
+  "filters": {
+    "high_priority_keywords": [
+      "AI 做APP 資料保存",
+      "AI 做網站 資料保存",
+      "AI 專案 後端",
+      "AI 專案 資料庫",
+      "AI 專案 上線失敗",
+      "Vercel 部署失敗",
+      "Vercel Supabase",
+      "Vercel API Key",
+      "Supabase auth",
+      "Supabase RLS 權限",
+      "Supabase 資料保存",
+      "獨立開發 後端",
+      "獨立開發 資料庫",
+      "獨立開發 登入註冊",
+      "vibe coding 後端",
+      "vibe coding 資料庫",
+      "WorkBuddy 後端",
+      "WorkBuddy 資料庫",
+      "WorkBuddy 踩坑"
+    ],
+    "include_keywords": [
+      "Cursor",
+      "Claude Code",
+      "Trae",
+      "Lovable",
+      "Bolt",
+      "WorkBuddy",
+      "vibe coding",
+      "Vibe Coding",
+      "AI 做APP",
+      "AI 做網站",
+      "AI 專案",
+      "獨立開發",
+      "MVP",
+      "SaaS",
+      "App",
+      "網站",
+      "後端",
+      "資料庫",
+      "登入註冊",
+      "權限",
+      "RLS",
+      "Auth",
+      "API Key",
+      "環境變數",
+      "部署",
+      "上線失敗",
+      "Vercel",
+      "Supabase",
+      "資料保存",
+      "報錯",
+      "卡住",
+      "求助",
+      "請教",
+      "怎麼辦",
+      "搞不定",
+      "不會配",
+      "麻煩",
+      "繁瑣",
+      "不想自己弄"
+    ],
+    "exclude_keywords": [
+      "Cursor 教程",
+      "Claude Code 教程",
+      "Trae 教程",
+      "小白 AI 編程 教程",
+      "AI 編程 工具推薦",
+      "AI編程 學習打卡",
+      "vibe coding 學習打卡",
+      "GitHub 熱榜 AI",
+      "howto入門vibecoding",
+      "howto用AI手搓APP",
+      "保姆級",
+      "入門教程",
+      "手把手",
+      "零基礎",
+      "學習打卡",
+      "Day ",
+      "資料整理",
+      "工具合集",
+      "開源專案",
+      "專案火了",
+      "最近很火",
+      "star",
+      "Star",
+      "一鍵部署",
+      "值得試試",
+      "亮點：",
+      "大廠開源",
+      "開源的",
+      "專案推薦",
+      "可以把它理解成",
+      "試試看",
+      "用完可以指導一下",
+      "推薦料理",
+      "熱榜",
+      "日報",
+      "資訊",
+      "乾貨分享",
+      "建議",
+      "融資",
+      "生產力工具",
+      "適合非技術",
+      "普通人",
+      "不懂代碼",
+      "門檻",
+      "體驗一下",
+      "工程習慣",
+      "專案叫",
+      "萬star",
+      "插件",
+      "作者",
+      "原文",
+      "論文",
+      "工具推薦",
+      "加入我的社群",
+      "註冊連結",
+      "交易",
+      "Token",
+      "Web3",
+      "課程",
+      "訓練營",
+      "私教",
+      "社群",
+      "賣資料",
+      "招聘",
+      "實習",
+      "求職",
+      "面試",
+      "履歷",
+      "什麼是 LLM",
+      "什麼是 Agent",
+      "insforge",
+      "InsForge",
+      "INSFORGE"
+    ],
+    "required_groups": {
+      "first_person": [
+        "我做了",
+        "我用 AI",
+        "我搭了",
+        "我寫了",
+        "我開發",
+        "我卡住",
+        "我的專案",
+        "我的 App",
+        "我的網站"
+      ],
+      "project_context": [
+        "App",
+        "APP",
+        "網站",
+        "SaaS",
+        "MVP",
+        "小程式",
+        "獨立開發",
+        "專案",
+        "Demo",
+        "前端原型"
+      ],
+      "backend_pain": [
+        "後端",
+        "資料庫",
+        "登入",
+        "註冊",
+        "登入註冊",
+        "權限",
+        "RLS",
+        "Auth",
+        "API Key",
+        "環境變數",
+        "部署",
+        "Vercel",
+        "Supabase",
+        "資料保存",
+        "上線失敗",
+        "存不進去"
+      ],
+      "help_tone": [
+        "求助",
+        "請教",
+        "怎麼辦",
+        "卡住了",
+        "卡在",
+        "上線失敗",
+        "部署失敗",
+        "報錯",
+        "搞不定",
+        "不會配",
+        "連不上",
+        "存不進去",
+        "資料存不進去"
+      ],
+      "complaint_tone": [
+        "麻煩",
+        "繁瑣",
+        "太煩",
+        "不想自己弄",
+        "懶得配",
+        "折騰",
+        "配置半天",
+        "手動配置",
+        "不想配"
+      ]
+    },
+    "must_match_groups": [
+      "backend_pain"
+    ],
+    "must_match_any_group_sets": [
+      [
+        "project_context"
+      ],
+      [
+        "help_tone",
+        "complaint_tone",
+        "first_person"
+      ]
+    ],
+    "min_score": 6,
+    "language_filter": {
+      "script": "traditional",
+      "min_chinese_chars": 8,
+      "min_script_markers": 1
+    },
+    "relaxed_min_score": 4,
+    "relaxed_must_match_groups": [
+      "backend_pain"
+    ],
+    "relaxed_must_match_any_group_sets": [
+      [
+        "project_context"
+      ],
+      [
+        "help_tone",
+        "complaint_tone",
+        "first_person"
+      ]
+    ]
+  },
+  "dedupe": {
+    "state_path": "data/seen_posts_zh_tw.json",
+    "keys": [
+      "post_url",
+      "post_id",
+      "author_handle_text_hash"
+    ]
+  },
+  "no_reply_profile": {
+    "path": "config/no_reply_profile.json",
+    "training_inputs": [
+      "data/no_reply_samples.jsonl"
+    ],
+    "min_phrase_count": 2
+  },
+  "outputs": {
+    "root": "outputs/zh-tw",
+    "pointer_path": "outputs/x_leads_zh_tw_pointer.json"
+  },
+  "lark": {
+    "base_token": "",
+    "table_id": "tblgzlJjSEthFWmr",
+    "table_name": "X-繁中",
+    "required_fields": [
+      "发布时间",
+      "帖子名字",
+      "帖子链接",
+      "状态",
+      "评论",
+      "匹配关键词",
+      "后续帖主回复",
+      "回复情况",
+      "二次评论",
+      "其他"
+    ],
+    "human_only_fields": [
+      "状态",
+      "评论",
+      "后续帖主回复",
+      "回复情况",
+      "二次评论",
+      "其他"
+    ],
+    "default_status": ""
+  }
+}

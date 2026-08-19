@@ -1,0 +1,312 @@
+{
+  "run": {
+    "dry_run_default": true,
+    "max_new_leads_per_run": 50,
+    "timezone": "Asia/Shanghai",
+    "provider": "scweet",
+    "fixture_path": "fixtures/sample_posts.json",
+    "raw_fetch_limit": 240
+  },
+  "scweet": {
+    "daily_requests_limit": 80,
+    "daily_tweets_limit": 900,
+    "concurrency": 1,
+    "n_splits": 1,
+    "requests_per_min": 6,
+    "min_delay_s": 5,
+    "max_empty_pages": 1,
+    "api_page_size": 20
+  },
+  "x": {
+    "queries": [
+      "(I OR my OR help OR stuck OR error) (Supabase OR Vercel OR database OR backend OR \"API key\" OR RLS OR Auth) (app OR website OR SaaS OR MVP OR project OR \"side project\")",
+      "(\"I built\" OR \"I'm building\" OR \"I made\" OR \"I used AI\" OR \"vibe coding\") (app OR website OR SaaS OR MVP OR project) (backend OR database OR login OR deploy OR Supabase OR Vercel)",
+      "(Cursor OR \"Claude Code\" OR Lovable OR Bolt OR Trae OR WorkBuddy OR \"vibe coding\") (backend OR database OR Supabase OR Vercel OR deploy OR login) (stuck OR error OR failed OR help OR tedious OR annoying)",
+      "(\"data not saving\" OR \"can't save data\" OR \"database error\" OR \"RLS policy\" OR \"environment variable\") (AI OR Cursor OR Lovable OR Vercel OR Supabase OR project)",
+      "(\"Vercel deploy failed\" OR \"Vercel environment variables\" OR \"Supabase auth\" OR \"Supabase RLS\" OR \"login signup\") (help OR stuck OR error OR failed OR \"can't figure out\")",
+      "(\"indie hacker\" OR \"side project\" OR MVP OR SaaS) (backend OR database OR auth OR deploy OR Supabase OR Vercel) (stuck OR annoying OR tedious OR help OR error)",
+      "Supabase database lang:en",
+      "Supabase auth lang:en"
+    ],
+    "lang": "en",
+    "result_type": "Latest",
+    "lookback_hours": 720,
+    "read_only": true
+  },
+  "filters": {
+    "high_priority_keywords": [
+      "AI app data saving",
+      "AI website data saving",
+      "AI project backend",
+      "AI project database",
+      "AI project deploy failed",
+      "Vercel deploy failed",
+      "Vercel Supabase",
+      "Vercel API Key",
+      "Supabase auth",
+      "Supabase RLS",
+      "Supabase data saving",
+      "indie project backend",
+      "indie project database",
+      "indie project login",
+      "vibe coding backend",
+      "vibe coding database",
+      "WorkBuddy backend",
+      "WorkBuddy database"
+    ],
+    "include_keywords": [
+      "Cursor",
+      "Claude Code",
+      "Trae",
+      "Lovable",
+      "Bolt",
+      "WorkBuddy",
+      "vibe coding",
+      "Vibe Coding",
+      "AI app",
+      "AI website",
+      "AI project",
+      "indie project",
+      "side project",
+      "MVP",
+      "SaaS",
+      "app",
+      "website",
+      "backend",
+      "database",
+      "login",
+      "signup",
+      "permission",
+      "RLS",
+      "Auth",
+      "API Key",
+      "environment variable",
+      "env var",
+      "deploy",
+      "deployment",
+      "Vercel",
+      "Supabase",
+      "data saving",
+      "data not saving",
+      "error",
+      "stuck",
+      "need help",
+      "please help",
+      "any help",
+      "help with",
+      "how do I",
+      "can't figure out",
+      "tedious",
+      "annoying",
+      "manual setup"
+    ],
+    "exclude_keywords": [
+      "Cursor tutorial",
+      "Claude Code tutorial",
+      "Trae tutorial",
+      "AI coding tools",
+      "beginner tutorial",
+      "step by step",
+      "zero to hero",
+      "course",
+      "bootcamp",
+      "cohort",
+      "private coaching",
+      "community",
+      "join my community",
+      "newsletter",
+      "daily digest",
+      "connect with",
+      "let's connect",
+      "drop a",
+      "How I built",
+      "HOW I BUILT",
+      "how to",
+      "What is",
+      "released",
+      "open-sourced",
+      "open source",
+      "making it open source",
+      "No server. No database",
+      "benchmark",
+      "article",
+      "translation",
+      "interview",
+      "checklist",
+      "tips",
+      "guide",
+      "waitlist",
+      "early access",
+      "Day ",
+      "resource list",
+      "tool roundup",
+      "GitHub trending",
+      "hot repo",
+      "job",
+      "joki",
+      "testi",
+      "open ya",
+      "company profile",
+      "hiring",
+      "internship",
+      "resume",
+      "interview",
+      "what is LLM",
+      "what is Agent",
+      "Web3",
+      "Token",
+      "insforge",
+      "InsForge",
+      "INSFORGE"
+    ],
+    "required_groups": {
+      "first_person": [
+        "I built",
+        "I'm building",
+        "I am building",
+        "I made",
+        "I used AI",
+        "I use Cursor",
+        "my app",
+        "my website",
+        "my project",
+        "my MVP",
+        "my SaaS"
+      ],
+      "project_context": [
+        "app",
+        "website",
+        "SaaS",
+        "MVP",
+        "side project",
+        "indie project",
+        "project",
+        "demo",
+        "prototype",
+        "frontend"
+      ],
+      "backend_pain": [
+        "backend",
+        "database",
+        "login",
+        "signup",
+        "auth",
+        "permission",
+        "RLS",
+        "API Key",
+        "environment variable",
+        "env var",
+        "deploy",
+        "deployment",
+        "Vercel",
+        "Supabase",
+        "data saving",
+        "data not saving",
+        "can't save"
+      ],
+      "help_tone": [
+        "need help",
+        "please help",
+        "any help",
+        "help with",
+        "how do I",
+        "stuck",
+        "blocked",
+        "failed",
+        "error",
+        "can't figure out",
+        "can't get",
+        "doesn't work",
+        "not working"
+      ],
+      "complaint_tone": [
+        "tedious",
+        "annoying",
+        "pain",
+        "hassle",
+        "too much setup",
+        "manual setup",
+        "manual config",
+        "don't want to",
+        "tired of"
+      ]
+    },
+    "must_match_groups": [
+      "backend_pain"
+    ],
+    "must_match_any_group_sets": [
+      [
+        "project_context"
+      ],
+      [
+        "help_tone",
+        "complaint_tone"
+      ]
+    ],
+    "min_score": 6,
+    "language_filter": {
+      "script": "english",
+      "min_latin_words": 8,
+      "max_cjk_chars": 2
+    },
+    "relaxed_min_score": 4,
+    "relaxed_must_match_groups": [
+      "backend_pain"
+    ],
+    "relaxed_must_match_any_group_sets": [
+      [
+        "project_context"
+      ],
+      [
+        "help_tone",
+        "complaint_tone",
+        "first_person"
+      ]
+    ]
+  },
+  "dedupe": {
+    "state_path": "data/seen_posts_en.json",
+    "keys": [
+      "post_url",
+      "post_id",
+      "author_handle_text_hash"
+    ]
+  },
+  "no_reply_profile": {
+    "path": "config/no_reply_profile.json",
+    "training_inputs": [
+      "data/no_reply_samples.jsonl"
+    ],
+    "min_phrase_count": 2
+  },
+  "outputs": {
+    "root": "outputs/en",
+    "pointer_path": "outputs/x_leads_en_pointer.json"
+  },
+  "lark": {
+    "base_token": "",
+    "table_id": "",
+    "table_name": "X-英语",
+    "required_fields": [
+      "发布时间",
+      "帖子名字",
+      "帖子链接",
+      "状态",
+      "评论",
+      "匹配关键词",
+      "后续帖主回复",
+      "回复情况",
+      "二次评论",
+      "其他"
+    ],
+    "human_only_fields": [
+      "状态",
+      "评论",
+      "后续帖主回复",
+      "回复情况",
+      "二次评论",
+      "其他"
+    ],
+    "default_status": ""
+  }
+}

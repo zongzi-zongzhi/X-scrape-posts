@@ -1,0 +1,31 @@
+{
+  "lark_cli_path": "",
+  "auth_cli_login_path": "",
+  "auth_cli_qrcode_path": "",
+  "profile": "feishu-other-org",
+  "verified_user": {
+    "user_name": "",
+    "user_open_id": "",
+    "token_status": "not_stored_in_repo",
+    "verified_at": null
+  },
+  "base_token": "",
+  "required_user_scopes": [
+    "base:field:read"
+  ],
+  "tables": {
+    "zh_cn": {
+      "name": "X-\u7b80\u4e2d",
+      "table_id": "tbld7aGIobbJNv2t"
+    },
+    "zh_tw": {
+      "name": "X-\u7e41\u4e2d",
+      "table_id": "tblgzlJjSEthFWmr"
+    }
+  },
+  "notes": [
+    "The one-time Feishu device_code and verification URL are intentionally not stored because they expire quickly.",
+    "After the user authorizes once, lark-cli stores the user token and refresh token locally for reuse by daily automation.",
+    "If auth expires, run: lark-cli auth login --scope \"base:field:read\"."
+  ]
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "post_id": "sample-001",
+    "post_url": "https://x.com/founder_one/status/sample001",
+    "author_handle": "founder_one",
+    "author_name": "Founder One",
+    "text": "Looking for an open source backend as a service that is easier to self-host than Supabase. Any serious options?",
+    "created_at": "2026-08-11T08:30:00Z",
+    "metrics": {"reply_count": 4, "retweet_count": 1, "like_count": 18}
+  },
+  {
+    "post_id": "sample-002",
+    "post_url": "https://x.com/growthbot/status/sample002",
+    "author_handle": "growthbot",
+    "author_name": "Growth Bot",
+    "text": "Huge crypto giveaway. Retweet to win. Follow me and join t.me/example",
+    "created_at": "2026-08-11T09:00:00Z",
+    "metrics": {"reply_count": 0, "retweet_count": 120, "like_count": 240}
+  },
+  {
+    "post_id": "sample-003",
+    "post_url": "https://x.com/dev_builder/status/sample003",
+    "author_handle": "dev_builder",
+    "author_name": "Dev Builder",
+    "text": "Firebase was fast to start, but I need Postgres, auth, storage and functions in one open source backend for a side project.",
+    "created_at": "2026-08-11T10:00:00Z",
+    "metrics": {"reply_count": 2, "retweet_count": 0, "like_count": 9}
+  }
+]
+

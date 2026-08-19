@@ -1,0 +1,23 @@
+{
+  "base_token": "",
+  "simplified": {
+    "name": "X-简中",
+    "table_id": "tbld7aGIobbJNv2t"
+  },
+  "traditional": {
+    "name": "X-繁中",
+    "table_id": "tblgzlJjSEthFWmr"
+  },
+  "english": {
+    "name": "X-英语",
+    "table_id": "tblpfhRNtf6YPTtS"
+  },
+  "japanese": {
+    "name": "X-日语",
+    "table_id": "tblXN1qYIL0qfohf"
+  },
+  "korean": {
+    "name": "X-韩语",
+    "table_id": "tblkbceeQtIOI0ng"
+  }
+}

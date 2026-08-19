@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "generated_at": null,
+  "blocked_handles": [],
+  "blocked_domains": [
+    "t.me",
+    "discord.gg",
+    "bit.ly"
+  ],
+  "blocked_phrases": [
+    "retweet to win",
+    "follow me",
+    "airdrop",
+    "giveaway",
+    "dm for promo",
+    "limited slots"
+  ],
+  "notes": "Seed profile. Regenerate with scripts/build_no_reply_profile.py after adding labeled no-reply samples."
+}
+
