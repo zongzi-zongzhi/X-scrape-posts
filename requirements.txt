@@ -1,6 +1,6 @@
 # Pinned for review before installation. The dry-run/static checks do not
 # require importing or executing these third-party packages.
-PyYAML==6.0.2
+PyYAML==6.0.3
 requests==2.32.3
 twscrape==0.20.0
 Scweet==5.3
